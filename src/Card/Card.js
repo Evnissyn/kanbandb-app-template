@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Field from './Field';
 
 const Card = ({ newTitle, newStatus, newDetails }) => {
 	const [title, setTitle] = useState(newTitle);
@@ -23,9 +24,9 @@ const Card = ({ newTitle, newStatus, newDetails }) => {
 
 	return (
 		<div>
-			<p>{ title }</p>
-			<p>{ status }</p>
-			<p>{ details }</p>
+			<Field label="Title" newValue={ newTitle } />			
+			<Field label="Status" newValue={ newStatus } />
+			<Field label="Details" newValue={ newDetails } />
 			<form>
 				<input type="text" placeholder={ title } name="inputTitle" />
 				<input type="text" placeholder={ status } name="inputStatus" />

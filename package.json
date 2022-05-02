@@ -7,7 +7,9 @@
     "kanbandb": "github:netpoetica/KanbanDB#master",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-movable": "^3.0.4",
+    "react-scripts": "3.4.3",
+    "scheduler": "^0.22.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -35,3 +37,4 @@
     "@testing-library/react": "^11.2.0"
   }
 }
+
