@@ -43,7 +43,7 @@ test('Field: User Input', () => {
 
 test('Field: Cancel Changes', () => {
   const newField = render(<Field label="Title" newValue="Next Step" />);
-  const { getByText, getByTitle } = newField;
+  const { getByText, getByPlaceholderText, getByTitle } = newField;
   
   fireEvent.click((getByTitle('editTitle')));
   fireEvent.change(getByPlaceholderText('Next Step'), {target: {value: 'Last Step'}})
@@ -55,7 +55,7 @@ test('Field: Cancel Changes', () => {
 
 test('Field: Save Changes', () => {
   const newField = render(<Field label="Title" newValue="Next Step" />);
-  const { getByTitle, getByPlaceholderText, findByRole } = newField;
+  const { getByTitle, getByPlaceholderText, getByText } = newField;
   fireEvent.click((getByTitle('editTitle')));
   fireEvent.change(getByPlaceholderText('Next Step'), {target: {value: 'Last Step'}})
   fireEvent.click((getByTitle('saveTitle')));
