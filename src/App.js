@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import MainDisplay from './MainDisplay';
 import './App.css';
 
 import KanbanDB from 'kanbandb';
@@ -39,6 +40,7 @@ function App() {
         >
           Learn React
         </a>
+        <MainDisplay />
       </header>
     </div>
   );
